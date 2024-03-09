@@ -1,0 +1,15 @@
+# Python
+**/__pycache__/
+/build/
+/samsung_smarttv_fw_url_bruteforce.egg-info/
+/samsung_smarttv_fw_url_bruteforce/_version.py
+**/*.pyc
+**/.mypy_cache/
+**/.ruff_cache/
+**/.pyre/
+
+# VS Code
+**/.vscode/
+
+# PyCharm
+**/.idea/

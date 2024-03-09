@@ -1,0 +1,70 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+  "setuptools>=69.0.3",
+  "setuptools-scm>=8.0.4"
+]
+
+[project]
+authors = [
+  {name = "Jevin Sweval", email = "jevinsweval@gmail.com"}
+]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.11"
+]
+dependencies = [
+  "attrs>=23.2.0",
+  "packaging>=23.2",
+  "path>=16.10.0",
+  "pretty-errors>=1.2.25",
+  "requests>=2.31.0",
+  "rich>=13.7.0",
+  "urllib3>=2.2.0"
+]
+description = "Brute force FW URL finder for shitty Samsung FartTVs"
+dynamic = [
+  "version"
+]
+keywords = [
+  "samsung",
+  "smarttv",
+  "firmware",
+  "bruteforce",
+  "scanner"
+]
+license = {text = "BSD-2-Clause"}
+name = "samsung-smarttv-fw-url-bruteforce"
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+dev = [
+  "ipython>=8.21.0",
+  "mypy>=1.8.0",
+  "ruff>=0.2.1",
+  "pytest>=8.0.0",
+  "types-requests>=2.31.0.20240125"
+]
+
+[project.scripts]
+samsung-smarttv-fw-url-bruteforce-util = "samsung_smarttv_fw_url_bruteforce.tools.util:main"
+
+[project.urls]
+repository = "https://github.com/jevinskie/samsung-smarttv-fw-url-bruteforce"
+
+[tool.mypy]
+strict = true
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.setuptools]
+packages = ["samsung_smarttv_fw_url_bruteforce"]
+zip-safe = true
+
+[tool.setuptools.dynamic]
+version = {attr = "samsung_smarttv_fw_url_bruteforce._version.__version__"}
+
+[tool.setuptools_scm]
+version_file = "samsung_smarttv_fw_url_bruteforce/_version.py"
